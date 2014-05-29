@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<definition name="template" template="/WEB-INF/jsp/layout/BasicView.jsp">
+		<put-attribute name="title" value="Testing Ecosystem" type="string" />
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/pageHeader.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/pageFooter.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/navigationView.jsp" />
+	</definition>
+
+	<definition name="signOut" extends="template">
+		<put-attribute name="title" value="Signout Testing Ecosystem" type="string" />
+	    <put-attribute name="body" value="/WEB-INF/jsp/signOut.jsp" />
+	</definition>
+
+	<definition name="error" extends="template">
+		<put-attribute name="title" value="Welcome" type="string" />
+	  <put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+	</definition>
+
+	<definition name="accessDenied" extends="template">
+		<put-attribute name="title" value="Welcome" type="string" />
+	  <put-attribute name="body" value="/WEB-INF/jsp/denied.jsp" />
+	</definition>
+
+	<!-- ***** Mtass Home tiles defs ***** -->
+	<definition name="home" extends="template">
+		<put-attribute name="title" value="Welcome" type="string" />
+	  <put-attribute name="body" value="/WEB-INF/jsp/home/home.jsp" />
+	</definition>
+
+</tiles-definitions>
